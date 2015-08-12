@@ -76,11 +76,11 @@ Vagrant.configure(2) do |config|
      v.customize ["modifyvm", :id, "--cpus", "4"]
   end
   # fowarded ports 
-  config.vm.network "forwarded_port", guest: 3000, host: 3000
-  config.vm.network "forwarded_port", guest: 3001, host: 3001
-  config.vm.network "forwarded_port", guest: 3002, host: 3002
-  config.vm.network "forwarded_port", guest: 3003, host: 3003
-  config.vm.network "forwarded_port", guest: 3306, host: 3310 #MYSQL (for access via your local machine)
+  config.vm.network "forwarded_port", guest: 4000, host: 4000
+  config.vm.network "forwarded_port", guest: 4001, host: 4001
+  config.vm.network "forwarded_port", guest: 4002, host: 4002
+  config.vm.network "forwarded_port", guest: 4003, host: 4003
+  config.vm.network "forwarded_port", guest: 3306, host: 4310 #MYSQL (for access via your local machine)
 
   config.vm.network "private_network", type: "dhcp"
 
