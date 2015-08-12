@@ -11,7 +11,6 @@ sudo mkdir /home/vagrant/dev/wormhole
 sudo apt-get clean
 
 # apt-get
-# https://help.ubuntu.com/lts/serverguide/apt-get.html
 # update the local package index
 sudo apt-get -y update
 # upgrade apt-get

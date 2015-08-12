@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # node install:
-sudo apt-get -y install nodejs
-sudo apt-get -y install npm
+sudo apt-get -y install nodejs -g
+sudo apt-get -y install npm -g
 
 # Clone dot files
 cd ~/ && \
@@ -20,10 +20,11 @@ ln -s ~/dotfiles/vim/.vim/bundle/* ~/.vim/bundle/
 # git submodule command (from within ~/dotfiles/vim/.vim/bundle/)
 cd dotfiles/vim/.vim/bundle/ && \
 git submodule update --init && \
-git submodule foreach git pull origin master
+git submodule foreach git pull origin master && \
+cd
 
 # install zsh and ohmyzsh and make default shell https://www.centosblog.com/spice-up-your-centos-shell-part-1-zsh/  (use ‘vagrant’ for <username> )
-sudo apt-get -y update && apt-get -y install zsh && \
+sudo apt-get -y update && apt-get -y install zsh
 sudo usermod -s /bin/zsh vagrant
 
 # install ohmyzsh
