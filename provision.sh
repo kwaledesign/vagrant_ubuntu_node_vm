@@ -54,6 +54,7 @@ git config --global color.status auto
 # change ownership of /tmp to avoid permission issues
 sudo chown -R vagrant:vagrant /tmp
 
+
 # git setup script
 #su
 

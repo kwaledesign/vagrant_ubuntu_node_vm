@@ -3,8 +3,11 @@
 Essentially a fork of  [dkoloditch](https://github.com/dkoloditch)'s awesome
 (closed source) work on our work enviornments.
 
-1. Download latest Ubuntu box (no guest additions flavor) from here: http://www.vagrantbox.es/  Most recent at time of this writting: [Official Ubuntu 14.10 daily Cloud Image amd64 (Development releaseNo Guest Additions)](https://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-amd64-vagrant-disk1.box) Even if not most recent Ubuntu, it's easy to update OS after downloaded and installed.
+1. Download latest Ubuntu box
 
+```
+vagrant box add ubuntu/trusty64
+```
 
 2. Local Machine Environment Setup (your Mac)
 
@@ -30,7 +33,7 @@ ln -s ~/vagrant_ubuntu_node_vm/provision.sh ~/dev/vagrant_boxes/OpenSource
 Also move the box you downloaded in step 1 to this same location (`~/dev/vagrant_boxes/OpenSource`) and add your new box
 
 ```
-vagrant box add ubuntu-14.10 utopic-server-cloudimg-amd64-vagrant-disk1.box
+vagrant box add ubuntu/trusty64
  ```
 
 4. Start and Provision Vagrant

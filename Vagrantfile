@@ -13,7 +13,7 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   # config.vm.box = "centos-7-pvdm-dev"
-  config.vm.box = "utopic-server-cloudimg-amd64-vagrant-disk1.box"
+  config.vm.box = "ubuntu/trusty64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -84,7 +84,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "private_network", type: "dhcp"
 
-  options = ['nolock,vers=3,udp,noatime,actimeo=1']
+  #options = ['nolock,vers=3,udp,noatime,actimeo=1']
   #config.vm.synced_folder "~/dev/exampleProject",                "/home/vagrant/dev/exampleProject",   type: "nfs", mount_options: options
   #config.vm.synced_folder "~/dev/vagrant_boxes/wormhole", "/home/vagrant/dev/wormhole",  type: "nfs", mount_options: options
 
