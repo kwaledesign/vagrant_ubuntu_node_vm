@@ -86,7 +86,7 @@ Vagrant.configure(2) do |config|
 
   options = ['nolock,vers=3,udp,noatime,actimeo=1']
   #config.vm.synced_folder "~/dev/exampleProject",                "/home/vagrant/dev/exampleProject",   type: "nfs", mount_options: options
-  config.vm.synced_folder "~/dev/vagrant_boxes/wormhole", "/home/vagrant/dev/wormhole",  type: "nfs", mount_options: options
+  #config.vm.synced_folder "~/dev/vagrant_boxes/wormhole", "/home/vagrant/dev/wormhole",  type: "nfs", mount_options: options
 
   config.vm.provision "shell", path: "provision.sh"
 end

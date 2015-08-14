@@ -27,17 +27,6 @@ sudo apt-get -y install epel-release
 sudo apt-get -y install nodejs
 sudo apt-get -y install npm
 
-# install nfs file-sharing service for faster file syncing
-sudo apt-get -y install nfs-utils nfs-utils-lib
-sudo systemctl enable rpcbind
-sudo systemctl enable nfs-server
-sudo systemctl enable nfs-lock
-sudo systemctl enable nfs-idmap
-sudo systemctl start rpcbind
-sudo systemctl start nfs-server
-sudo systemctl start nfs-lock
-sudo systemctl start nfs-idmap
-
 # rvm
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 sudo \curl -sSL https://get.rvm.io | bash -s stable --ruby
@@ -64,10 +53,6 @@ git config --global color.status auto
 
 # change ownership of /tmp to avoid permission issues
 sudo chown -R vagrant:vagrant /tmp
-
-# NFS share configuration
-printf '/home/vagrant/dev/ 172.28.128.0/24(rw,sync,no_root_squash,no_all_squash,insecure)' > /etc/exports
-systemctl restart nfs-server
 
 # git setup script
 #su
