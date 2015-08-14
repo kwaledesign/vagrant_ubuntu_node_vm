@@ -7,6 +7,9 @@ sudo chmod 777 -R /home/vagrant/dev
 # create wormhole
 sudo mkdir /home/vagrant/dev/wormhole
 
+# Tell apt-get to expect no interactive input preventing it from trying to access stdin
+export DEBIAN_FRONTEND=noninteractive
+
 # clear apt-get cache
 sudo apt-get clean
 
@@ -25,7 +28,7 @@ sudo apt-get -y install nodejs
 sudo apt-get -y install npm
 
 # install nfs file-sharing service for faster file syncing
-sudo yum -y install nfs-utils nfs-utils-lib
+sudo apt-get -y install nfs-utils nfs-utils-lib
 sudo systemctl enable rpcbind
 sudo systemctl enable nfs-server
 sudo systemctl enable nfs-lock
