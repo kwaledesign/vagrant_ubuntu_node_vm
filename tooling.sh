@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# update
+sudo apt-get -y update 
+
 # node install:
 sudo apt-get -y install nodejs -g
 sudo apt-get -y install npm -g
@@ -24,7 +27,8 @@ git submodule foreach git pull origin master && \
 cd
 
 # install zsh and ohmyzsh and make default shell https://www.centosblog.com/spice-up-your-centos-shell-part-1-zsh/  (use ‘vagrant’ for <username> )
-sudo apt-get -y update && apt-get -y install zsh
+
+apt-get -y install zsh
 sudo usermod -s /bin/zsh vagrant
 
 # install ohmyzsh
@@ -37,7 +41,7 @@ ln -s ~/dotfiles/zsh/.zshrc
 sudo npm install -g vtop
 
 # install vifm ("Vifm is an ncurses based file manager with vi like keybindings/modes/options/commands/configurationwhich also borrows some useful ideas from mutt. If you use viVifm gives you complete keyboard control over your files without having to learn a new set of commands.”) (http://software.opensuse.org/download.html?project=utilities&package=vifm)
-apt-get install vifm
+sudo apt-get -y install vifm
 # themes: https://github.com/vifm/vifm-colors (symlink from dotfiles dir/ )
 ln -s ~/dotfiles/vifm/.vifmrc && \
 ln -s ~/dotfiles/vifm/.vifm/colors
@@ -48,15 +52,16 @@ ln -s ~/dotfiles/vifm/.vifm/colors
 sudo apt-get install tig
 
 # ACK http://beyondgrep.com/documentation/
-sudo apt-get install ack-grep
+sudo apt-get install -y ack-grep
 
 # install yeoman 
 # (if you run into npm dependency issuessee: http://askubuntu.com/questions/562417/how-do-you-update-npm-to-the-latest-version )
-sudo npm install -g yo
+# not installing, don't know why...
+#sudo npm install -g yo --stable
 
 # install caniuse npm package https://www.npmjs.com/package/caniuse-cmd
 sudo npm install -g caniuse-cmd
 
 # install bundler
-gem install bundler
+sudo gem install bundler
 
