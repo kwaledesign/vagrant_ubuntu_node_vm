@@ -20,7 +20,7 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 
 # install required libraries for gem installs
-sudo apt-get -y install libxml2-devel
+sudo apt-get -y install libxml2-dev
 
 # install js runtime
 sudo apt-get -y install epel-release
