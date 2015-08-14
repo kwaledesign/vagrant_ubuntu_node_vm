@@ -27,8 +27,8 @@ If this is a subsequent install, clean up previous installation
 	vagrant box remove utopic-server-cloudimg-amd64-vagrant-disk1.box
 	rm -fr .vagrant/ Vagrantfile provision.sh utopic-server-cloudimg-amd64-vagrant-disk1.box
 ```
-~~(This should delete all previous vm's but, open the VirtualBox app and be
-sure)~~
+_(This should delete all previous vm's but, open the VirtualBox app and be
+sure)_
 
 Regardless if first or subsequent install, run the following
 ```
@@ -74,27 +74,34 @@ connect to your Vagrant machine
   vagrant ssh
 ```
 
+Clone config into vm (necessarily redundant bc vm can't see os x files)
+
+```
+  git clone https://github.com/kwaledesign/vagrant_ubuntu_node_vm.git
+```
+_note: using HTTPS here because SSH credentials aren't yet configured in the vm_
+
 git setup, (hit ENTER to use defaults and no passphrase)
 
 ```
-  sh ~/vagrant_ubuntu_node_vm/git_setup.sh ????
+  sh ~/vagrant_ubuntu_node_vm/git_setup.sh .
 ```
 
-verify and complete the setup (IMPORTANT)
+Verify and complete the setup (IMPORTANT)
 
 ```
-ssh -T git@github.com
+  ssh -T git@github.com
 ```
 
-permissions fix for dev/ directory
+Permissions fix for dev/ directory
 
 ```
-sudo chown vagrant:vagrant -R ~/dev/
+  sudo chown vagrant:vagrant -R ~/dev/
 ```
 
-6. Final Enviornment Configuration
+### 6. Final Environment Configuration
 
 ```
-sh ~/vagrant_ubuntu_node_vm/provisionEnviornment.sh 
+  sh ~/vagrant_ubuntu_node_vm/tooling.sh 
 ```
  
