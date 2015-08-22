@@ -60,3 +60,8 @@ sudo npm install -g caniuse-cmd
 # install bundler
 gem install bundler
 
+# eslint
+sudo npm install -g eslint
+
+#csslint
+sudo npm install -g csslint
