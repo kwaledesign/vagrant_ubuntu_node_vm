@@ -6,6 +6,10 @@ sudo apt-get -y update
 # node install:
 sudo apt-get -y install nodejs -g
 sudo apt-get -y install npm -g
+# update npm
+sudo sudo npm install npm -g
+# download and install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.0/install.sh | bash
 
 # Clone dot files
 cd ~/ && \
