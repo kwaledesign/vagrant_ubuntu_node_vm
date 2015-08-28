@@ -4,10 +4,9 @@
 sudo apt-get -y update 
 
 # node install:
-sudo apt-get -y install nodejs -g
 sudo apt-get -y install npm -g
 # update npm
-sudo sudo npm install npm -g
+sudo npm install npm -g
 # download and install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.26.0/install.sh | bash
 
@@ -74,3 +73,9 @@ sudo npm install -g eslint
 
 #csslint
 sudo npm install -g csslint
+
+# install ruby-dev to allow for gem installs
+sudo apt-get install ruby-dev
+# install make
+sudo apt-get install make
+
