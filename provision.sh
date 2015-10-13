@@ -52,11 +52,4 @@ git config --global color.diff auto
 git config --global color.status auto
 
 # change ownership of /tmp to avoid permission issues
-sudo chown -R vagrant:vagrant /tmp
-
-
-# git setup script
-#su
-
-#printf '#!/bin/sh\nname=""\nemail=""\necho ""\necho "****************************"\necho "         Git Config         "\necho "****************************"\necho ""\nread -p "Enter your name: " name\nread -p "Enter your email: " email\necho ""\n\ngit config --global user.name "$name"\ngit config --global user.email "$email"\nssh-keygen -t rsa -C "$email"\neval "$(ssh-agent -s)"\nssh-add ~/.ssh/id_rsa\necho ""\necho ""\ncat ~/.ssh/id_rsa.pub\necho ""\necho ""\n\n\necho "Copy your public key above and paste in Settings > SSH Keys on github.com"' > /home/vagrant/dev/git_setup.sh
-
+# sudo chown -R vagrant:vagrant /tmp
