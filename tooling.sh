@@ -74,8 +74,5 @@ sudo npm install -g eslint
 #csslint
 sudo npm install -g csslint
 
-# install ruby-dev to allow for gem installs
-sudo apt-get install ruby-dev
 # install make
 sudo apt-get install make
-

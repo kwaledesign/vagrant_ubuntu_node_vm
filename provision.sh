@@ -19,28 +19,10 @@ sudo apt-get -y update
 # upgrade apt-get
 sudo apt-get -y upgrade
 
-# install required libraries for gem installs
-sudo apt-get -y install libxml2-dev
-
 # install js runtime
 sudo apt-get -y install epel-release
 sudo apt-get -y install nodejs
 sudo apt-get -y install npm
-
-# rvm
-gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
-sudo \curl -sSL https://get.rvm.io | bash -s stable --ruby
-curl -sSL https://get.rvm.io | bash -s $1
-source /usr/local/rvm/scripts/rvm
-rvm use --install $1
-shift
-if (( $# ))
-then gem install $@
-fi
-rvm install '2.1.5'
-rvm install '2.2.0'
-sudo chmod 755 -R /usr/local/rvm
-sudo chown vagrant -R /usr/local/rvm
 
 # install vim
 sudo apt-get -y install vim
